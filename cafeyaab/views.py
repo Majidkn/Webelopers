@@ -9,8 +9,8 @@ from django.views.generic.base import TemplateView
 
 
 def BaseView(request):
-    return render(request, 'cafeyaab/base.html')
+    return render(request, 'cafeyaab/__base.html')
 
 
 def HomeView(request):
-    return render(request, 'cafeyaab/home.html')
+    return render(request, 'cafeyaab/_home.html')
