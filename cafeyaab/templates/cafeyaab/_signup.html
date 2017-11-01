@@ -5,7 +5,7 @@
     <form method="post">
         {% csrf_token %}
         {% for field in form %}
-            <p>
+            <div class="form-group">
                 {{ field.label_tag }}<br>
                 {{ field }}
                 {% if field.help_text %}
@@ -14,8 +14,10 @@
                 {% for error in field.errors %}
                     <p style="color: red">{{ error }}</p>
                 {% endfor %}
-            </p>
+            </div>
+
         {% endfor %}
         <input class="btn btn-success" type="submit" value="ثبت نام">
+        {% if errors %}{% for error in errors %}<span style="color: red">{{ error }}</span>{% endfor %}{% endif %}
     </form>
 {% endblock %}
