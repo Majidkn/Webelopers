@@ -8,5 +8,9 @@ from django.urls import reverse
 from django.views.generic.base import TemplateView
 
 
+def BaseView(request):
+    return render(request, 'cafeyaab/base.html')
+
+
 def HomeView(request):
-    return render(request, 'base.html')
+    return render(request, 'cafeyaab/home.html')
