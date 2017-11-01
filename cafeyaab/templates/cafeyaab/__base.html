@@ -6,18 +6,31 @@
     <meta charset="UTF-8">
     <title>CafeYaab</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="http://cdn.rawgit.com/morteza/bootstrap-rtl/v3.3.4/dist/css/bootstrap-rtl.min.css">
+    {#    <link rel="stylesheet" href="http://cdn.rawgit.com/morteza/bootstrap-rtl/v3.3.4/dist/css/bootstrap-rtl.min.css">#}
     <link rel="stylesheet" href="{% static "style.css" %}">
 </head>
 <body>
 <nav class="navbar navbar-default" style="line-height: 50px;">
     <ul>
-        <li class="nav navbar-nav"><a href="/home"> خانه</a></li>
+        <li class="nav navbar-nav"><a href="/home"> Home</a></li>
+        <li class="nav navbar-nav"><a href="/cafes"> Cafes</a></li>
+        <li id="search" style="display: none;">
+            <form method="GET" action="">
+                <input name="query" type="text" class="form-control" style="display: inline-block;">
+                <input style="float: left;" class="btn btn-success" type="submit">
+            </form>
+        </li>
+
     </ul>
 </nav>
 <div class="container">
     {% block content %}
     {% endblock %}
 </div>
+<script type="text/javascript">
+    var search = document.getElementById('search');
+    if (window.location.toString().split('/')[3] == 'cafes')
+        search.style.display = "inline-block";
+</script>
 </body>
 </html>

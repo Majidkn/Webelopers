@@ -35,3 +35,40 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+nav a{
+    margin-right: 20px;
+}
+
+.cafe-list {
+
+}
+
+.cafe {
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.cafe-info {
+    display: inline;
+    position: relative;
+    left: 10px;
+}
+
+.cafe span:first-child {
+    font-size: 24px;
+}
+
+.cafe span:nth-child(2) {
+    display: block;
+
+}
+
+.cafe img {
+    float: left;
+    width: 150px;
+    height: 150px;
+}
+#map {
+    height: 100vh;
+    border: 2px solid;
+}

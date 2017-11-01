@@ -1,0 +1,14 @@
+{% extends 'cafeyaab/__base.html' %}
+{% block content %}
+    <div class="col-sm-12">
+        <div class="cafe">
+            <img src="{{ cafe.main_image_url }}" alt="">
+            <div class="cafe-info">
+                <span>{{ cafe.name }}</span>
+                <span>{{ cafe.description }}</span>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
