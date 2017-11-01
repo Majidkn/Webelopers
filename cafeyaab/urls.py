@@ -1,7 +1,6 @@
 from django.conf.urls import url
-
-from cafeyaab.views import HomeView
+from . import views
 
 urlpatterns = [
-    url(r'^$', HomeView.as_view(), name='home'),
+    url(r'^', views.HomeView, name='home'),
 ]

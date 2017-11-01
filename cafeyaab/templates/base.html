@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <title>CafeYaab</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://cdn.rawgit.com/morteza/bootstrap-rtl/v3.3.4/dist/css/bootstrap-rtl.min.css">
+    <link rel="stylesheet" href="{% static "style.css" %}">
+</head>
+<body>
+<nav class="navbar navbar-default" style="line-height: 50px;">
+    <ul>
+        <li class="nav navbar-nav">خانه</li>
+    </ul>
+</nav>
+<div class="container">
+    {% block home %}
+
+    {% endblock %}
+</div>
+</body>
+</html>
