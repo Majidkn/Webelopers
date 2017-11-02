@@ -33,10 +33,10 @@
         </li>
         {% if user.is_authenticated %}
             <li class="pull-right"><a href="/logout">Logout</a></li>
+            <li class="pull-right"><a href="/profile">Profile</a></li>
         {% else %}
-        <li class="pull-right"><a href="/login">Login</a></li>
-        <li class="pull-right"><a href="/signup">Signup</a></li>
-
+            <li class="pull-right"><a href="/login">Login</a></li>
+            <li class="pull-right"><a href="/signup">Signup</a></li>
         {% endif %}
 
     </ul>
@@ -56,40 +56,40 @@
 
     }
     $(function () {
-            // Add refresh button after field (this can be done in the template as well)
-            $('img.captcha').after(
-                $('<a href="#void" class="captcha-refresh"><button class="btn btn-warning">Refresh</button></a>')
-            );
+        // Add refresh button after field (this can be done in the template as well)
+        $('img.captcha').after(
+            $('<a href="#void" class="captcha-refresh"><button class="btn btn-warning">Refresh</button></a>')
+        );
 
-            // Click-handler for the refresh-link
-            $('.captcha-refresh').click(function () {
-                var $form = $(this).parents('form');
-                var url = location.protocol + "//" + window.location.hostname + ":"
-                    + location.port + "/captcha/refresh/";
+        // Click-handler for the refresh-link
+        $('.captcha-refresh').click(function () {
+            var $form = $(this).parents('form');
+            var url = location.protocol + "//" + window.location.hostname + ":"
+                + location.port + "/captcha/refresh/";
 
-                // Make the AJAX-call
-                $.getJSON(url, {}, function (json) {
-                    $form.find('input[name="captcha_0"]').val(json.key);
-                    $form.find('img.captcha').attr('src', json.image_url);
-                });
-
-                return false;
+            // Make the AJAX-call
+            $.getJSON(url, {}, function (json) {
+                $form.find('input[name="captcha_0"]').val(json.key);
+                $form.find('img.captcha').attr('src', json.image_url);
             });
-            $("input").addClass("form-control");
-            $("small").addClass("form-text text-muted");
-            $("#id_captcha_1").css("display", "inline-block");
+
+            return false;
         });
+        $("input").addClass("form-control");
+        $("small").addClass("form-text text-muted");
+        $("#id_captcha_1").css("display", "inline-block");
+    });
 
 
-        $("img.captcha").css("margin-right", "20px").css("display", "inline-block");
-        $(".searchInput").autocomplete({
-            source: "/cafes/get_cafes/",
-            minLength: 2,
-            select: function (event, ui) {
-                $(".searchInput").val(ui.item.value);
-                $("#searchForm").submit();
-            }
-        })
+    $("img.captcha").css("margin-right", "20px").css("display", "inline-block");
+    $(".searchInput").autocomplete({
+        source: "/cafes/get_cafes/",
+        minLength: 2,
+        select: function (event, ui) {
+            $(".searchInput").val(ui.item.value);
+            $("#searchForm").submit();
+        }
+    })
 </script>
 </body>
 </html>

@@ -1,9 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 # from __future__ import unicode_literals
-import user
 
-from django.contrib.auth.models import User
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect, render_to_response
 from django.core.urlresolvers import reverse
@@ -39,3 +37,11 @@ def signup(request):
 
 def account_activation_sent(request):
     return render(request, 'cafeyaab/account_activation_sent.html')
+
+
+def profile(request):
+
+    if request.user.is_authenticated:
+        return render(request, 'cafeyaab/profile.html')
+    else:
+        return redirect('login')

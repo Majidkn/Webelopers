@@ -19,7 +19,6 @@ def get_cafes(request):
         data = json.dumps(results)
     else:
         data = 'fail'
-    print data
     return HttpResponse(data)
 
 
