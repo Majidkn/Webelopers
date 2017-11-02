@@ -2,8 +2,9 @@
 # -*- coding: utf-8 -*-
 # from __future__ import unicode_literals
 
-from django.contrib.auth import login, authenticate
+from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect, render_to_response
+from django.core.urlresolvers import reverse
 from .forms import SignUpForm
 
 
@@ -18,18 +19,14 @@ def HomeView(request):
 def signup(request):
     if request.method == 'POST':
         form = SignUpForm(request.POST)
-        if form.validation() == None:
-            form.save()
-            username = form.cleaned_data.get('username')
-            raw_password = form.cleaned_data.get('password1')
-            user = authenticate(username=username, password=raw_password)
-            login(request, user)
-            return redirect('home')
-        else:
-            Form = SignUpForm()
-            return render(request, 'cafeyaab/_signup.html',
-                          {'form': Form, 'errors': form.validation()})
+        if form.is_valid():
+            user = form.save(commit=False)
+            user.is_active = False
+            user.save()
     else:
         form = SignUpForm()
-
     return render(request, 'cafeyaab/_signup.html', {'form': form})
+
+
+def account_activation_sent(request):
+    return render(request, 'cafeyaab/account_activation_sent.html')

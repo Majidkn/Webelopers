@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     {#    <link rel="stylesheet" href="http://cdn.rawgit.com/morteza/bootstrap-rtl/v3.3.4/dist/css/bootstrap-rtl.min.css">#}
     <link rel="stylesheet" href="{% static "style.css" %}">
+
+
 </head>
 <body>
 <nav class="navbar navbar-default" style="line-height: 50px;">
@@ -27,10 +29,38 @@
     {% block content %}
     {% endblock %}
 </div>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script type="text/javascript">
     var search = document.getElementById('search');
     if (window.location.toString().split('/')[3] == 'cafes')
         search.style.display = "inline-block";
+
+    $(function() {
+    // Add refresh button after field (this can be done in the template as well)
+    $('img.captcha').after(
+            $('<a href="#void" class="captcha-refresh"><button class="btn btn-warning">Refresh</button></a>')
+            );
+
+    // Click-handler for the refresh-link
+    $('.captcha-refresh').click(function(){
+        var $form = $(this).parents('form');
+        var url = location.protocol + "//" + window.location.hostname + ":"
+                  + location.port + "/captcha/refresh/";
+
+        // Make the AJAX-call
+        $.getJSON(url, {}, function(json) {
+            $form.find('input[name="captcha_0"]').val(json.key);
+            $form.find('img.captcha').attr('src', json.image_url);
+        });
+
+        return false;
+    });
+});
+
+    $("input").addClass("form-control")
+    $("small").addClass("form-text text-muted")
+    $("#id_captcha_1").css("display", "inline-block")
+    $("img.captcha").css("margin-right", "20px").css("display","inline-block")
 </script>
 </body>
 </html>
