@@ -1,14 +1,16 @@
 {% extends 'cafeyaab/__base.html' %}
 
 {% block content %}
-    {% if user.username %}
-        <span>You're Already Logged in</span>
-    {% else %}
-        <h2>Login</h2>
-        <form method="post">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit">Login</button>
-        </form>
-    {% endif %}
+    <div class="col-sm-4">
+        {% if user.username %}
+            <span>You're Already Logged in</span>
+        {% else %}
+            <h2>Login</h2>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="btn btn-success">Login</button>
+            </form>
+        {% endif %}
+    </div>
 {% endblock %}

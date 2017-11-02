@@ -1,9 +1,8 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 from django import forms
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth.models import User
-
 
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
@@ -14,7 +13,7 @@ from captcha.fields import CaptchaField
 class SignUpForm(UserCreationForm):
     first_name = forms.CharField(max_length=30, required=True, help_text='Required.', label='Name')
     email = forms.EmailField(max_length=254, help_text='Required.')
-    password1 = forms.CharField(label="Password", widget=forms.PasswordInput,)
+    password1 = forms.CharField(label="Password", widget=forms.PasswordInput, )
     password2 = forms.CharField(label="Password", widget=forms.PasswordInput, )
     captcha = CaptchaField()
 

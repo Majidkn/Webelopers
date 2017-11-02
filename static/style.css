@@ -43,7 +43,9 @@ nav a {
 ul {
     margin: auto;
 }
-
+ul li{
+    list-style: none;
+}
 .cafe-list {
 
 }

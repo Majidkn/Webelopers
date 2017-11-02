@@ -1,11 +1,20 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 # from __future__ import unicode_literals
+import user
 
+from django.contrib.auth.models import User
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect, render_to_response
 from django.core.urlresolvers import reverse
 from .forms import SignUpForm
+from django.contrib.auth import authenticate, login, logout
+from django.http import *
+from django.http import *
+from django.shortcuts import render_to_response, redirect
+from django.template import RequestContext
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth import authenticate, login, logout
 
 
 def BaseView(request):
