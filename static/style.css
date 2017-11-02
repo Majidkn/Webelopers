@@ -35,8 +35,13 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-nav a{
+
+nav a {
     margin-right: 20px;
+}
+
+ul {
+    margin: auto;
 }
 
 .cafe-list {
@@ -52,23 +57,25 @@ nav a{
     display: inline;
     position: relative;
     left: 10px;
+    top: 10px;
 }
 
 .cafe span:first-child {
     font-size: 24px;
 }
 
-.cafe span:nth-child(2) {
-    display: block;
 
-}
-
-.cafe img {
+.cafe .cafe-main-image {
     float: left;
     width: 150px;
     height: 150px;
+    padding: 0;
 }
+
 #map {
-    height: 100vh;
+    height: 80vh;
     border: 2px solid;
+    position: fixed !important;
+    right: 50px;
+    width: 40%;
 }
