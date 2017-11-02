@@ -1,13 +1,16 @@
 {% extends 'cafeyaab/__base.html' %}
 {% block content %}
     <div class="cafe-list col-sm-6">
+        {% if query %}
+            <span style="padding-bottom: 10px;display: block;">You've Searched For <b>{{ query }}</b></span>
+        {% endif %}
         {% for cafe in cafes %}
             {% if cafe.name %}
                 <div class="cafe">
                     <img src="{{ cafe.main_image_url }}" alt="">
                     <div class="cafe-info">
-                        <span><a href="{{ cafe.id }}">{{ cafe.name }}</a></span>
-                        <span>{{ cafe.description }}</span>
+                        <span><a href="{{ cafe.id }}">{{ cafe.name }}</a></span><br>
+                        <span style="position: relative; top: 20px;">{{ cafe.description }}</span>
                     </div>
                 </div>
             {% endif %}
@@ -17,10 +20,17 @@
     </div>
     <script type="text/javascript">
         initMap = function () {
-            map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 12,
-                center: new google.maps.LatLng(40.487671, -80.055464),
-                disableDefaultUI: true,
+            var locations = [], latSum = 0, lngSum = 0;
+            {% for cafe in cafes %}
+                locations.push(['{{ cafe.name }}', '{{ cafe.latitude }}', '{{ cafe.longitude }}', "{{ cafe.description|linebreaks }}", {{ cafe.id }}]);
+                latSum += +'{{ cafe.latitude }}';
+                lngSum += +'{{ cafe.longitude }}';
+            {% endfor %}
+            centerLat = latSum / +'{{ cafes|length }}';
+            centerLng = lngSum / +'{{ cafes|length }}';
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 10,
+                center: new google.maps.LatLng(centerLat, centerLng),
                 mapTypeControl: false,
                 styles: [
                     {
@@ -316,15 +326,26 @@
                     }
                 ]
             });
-            var locations = [];
-            {% for cafe in cafes %}
-                locations.push(['{{ cafe.name }}', '{{ cafe.latitude }}', '{{ cafe.longitude }}']);
-            {% endfor %}
-            for (var i = 0; i < locations.length; i++) {
-                marker = new google.maps.Marker({
+
+            for (let i = 0; i < locations.length; i++) {
+                let marker = new google.maps.Marker({
                     position: new google.maps.LatLng(locations[i][1], locations[i][2]),
                     map: map,
                     icon: '/static/marker.png'
+                });
+                let content = '<div>' + locations[i][0] + '</div><br><div>' + locations[i][3] + '</div><br><a href="' + locations[i][4] + '">Enter Cafe</a>';
+                let infowindow = new google.maps.InfoWindow({
+                    content: content,
+                    maxWidth: 350
+                });
+
+
+                google.maps.event.addListener(marker, 'click', function () {
+                    infowindow.open(map, marker);
+                });
+
+                google.maps.event.addListener(map, 'click', function () {
+                    infowindow.close();
                 });
             }
         }

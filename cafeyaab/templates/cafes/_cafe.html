@@ -2,13 +2,28 @@
 {% block content %}
     <div class="col-sm-12">
         <div class="cafe">
-            <img src="{{ cafe.main_image_url }}" alt="">
+{#            <div class="owl-carousel owl-theme">#}
+{#                {% for image in images %}#}
+{#                    <div class="item">#}
+{#                        <img class="owl-lazy" data-src="{{ image.image_url }}">#}
+{#                    </div>#}
+{#                {% endfor %}#}
+{#            </div>#}
+            <img class="cafe-main-image" src="{{ cafe.main_image_url }}" alt="">
             <div class="cafe-info">
-                <span>{{ cafe.name }}</span>
-                <span>{{ cafe.description }}</span>
+                <span>{{ cafe.name }}</span><br>
+                <span style="position: relative; top: 20px;">{{ cafe.description }}</span>
             </div>
         </div>
+                <hr>
+
     </div>
-
-
+{#    <script>#}
+{#        $('.owl-carousel').owlCarousel({#}
+{#            items: 4,#}
+{#            lazyLoad: true,#}
+{#            loop: true,#}
+{#            margin: 10#}
+{#        })#}
+{#    </script>#}
 {% endblock %}
