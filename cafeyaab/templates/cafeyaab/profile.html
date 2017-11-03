@@ -14,7 +14,7 @@
                 <div class="cafe">
                     <img class="cafe-main-image" src="{{ cafe.main_image_url }}" alt="">
                     <div class="cafe-info">
-                        <span><a href="cafes/{{ cafe.id }}">{{ cafe.name }}</a></span>
+                        <span><a href="/cafes/{{ cafe.id }}">{{ cafe.name }}</a></span>
                         {% include 'cafes/_favourite.html' %}
                         <br>
                         <span style="position: relative; top: 20px;">{{ cafe.description }}</span>
