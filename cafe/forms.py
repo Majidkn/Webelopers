@@ -1,3 +1,4 @@
+from django.forms.models import ModelForm
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 from django import forms
@@ -18,9 +19,3 @@ class CommentForm(ModelForm):
     class Meta:
         model = Comment
         fields = ('text',)
-
-
-# class AddCafeForm(ModelForm):
-#     class Meta:
-#         model = Cafe
-#         fields = ('name', 'description', 'latitude', 'longitude', 'main_image_url')

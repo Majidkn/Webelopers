@@ -54,25 +54,9 @@ ul li {
 
 .cafe {
     display: inline-block;
+    margin-bottom: 20px;
     padding: 30px 0;
-}
-
-.cafe:first-child {
-    /*border-top: 1px solid #eaeaea;*/
-}
-
-.cafe::after {
-    content: "";
-    display: block;
-    position: absolute;
-    bottom: 5px;
-    text-align: center;
-    width: 50%;
-    font-size: 18px;
-    height: 1px;
-    background: #000;
-    margin: 0 auto;
-    right: 25%;
+    width: 100%;
 }
 
 .cafe-info {
@@ -82,7 +66,7 @@ ul li {
     top: 10px;
 }
 
-.cafe span:first-child {
+.cafe-info a {
     font-size: 24px;
 }
 
@@ -91,6 +75,13 @@ ul li {
     width: 150px;
     height: 150px;
     padding: 0;
+}
+
+.popularity {
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+    bottom: 3px;
 }
 
 #map {

@@ -3,6 +3,8 @@ from __future__ import unicode_literals
 
 from django.contrib.auth.models import User
 from django.db import models
+from django.conf import settings
+from cafeyaab.models import User
 
 
 # Create your models here.
@@ -12,9 +14,10 @@ class Cafe(models.Model):
     description = models.TextField()
     longitude = models.FloatField()
     latitude = models.FloatField()
-    main_image_url = models.URLField(default='300.png')
-    creator = models.ForeignKey(User, null=True, blank=True)
+    creator = models.ForeignKey(settings.AUTH_USER_MODEL, null=True, blank=True)
     activated = models.BooleanField(default=False)
+    main_image_url = models.URLField()
+    popularity = models.IntegerField(default=0)
 
     def __str__(self):
         return self.name
@@ -28,5 +31,5 @@ class CafeImage(models.Model):
 class Comment(models.Model):
     text = models.TextField()
     cafe = models.ForeignKey(Cafe, null=True)
-    author = models.ForeignKey(User)
     show = models.BooleanField(default=True)
+    author = models.ForeignKey(settings.AUTH_USER_MODEL)

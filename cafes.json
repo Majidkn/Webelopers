@@ -1,6 +1,6 @@
 [
   {
-    "model": "cafe.cafe",
+    "model": "cafe.Cafe",
     "pk": 72,
     "fields": {
       "name": "Verizon Wireless",
@@ -11,7 +11,7 @@
     }
   },
   {
-    "model": "cafe.cafe",
+    "model": "cafe.Cafe",
     "pk": 73,
     "fields": {
       "name": "Denny's",
@@ -22,7 +22,7 @@
     }
   },
   {
-    "model": "cafe.cafe",
+    "model": "cafe.Cafe",
     "pk": 74,
     "fields": {
       "name": "Emmert Dental Associates",
@@ -33,7 +33,7 @@
     }
   },
   {
-    "model": "cafe.cafe",
+    "model": "cafe.Cafe",
     "pk": 75,
     "fields": {
       "name": "Cindy Esser's Floral Shop",
@@ -44,7 +44,7 @@
     }
   },
   {
-    "model": "cafe.cafe",
+    "model": "cafe.Cafe",
     "pk": 76,
     "fields": {
       "name": "McDonald's",
@@ -55,7 +55,7 @@
     }
   },
   {
-    "model": "cafe.cafe",
+    "model": "cafe.Cafe",
     "pk": 77,
     "fields": {
       "name": "Avalon Motel",
@@ -66,7 +66,7 @@
     }
   },
   {
-    "model": "cafe.cafe",
+    "model": "cafe.Cafe",
     "pk": 78,
     "fields": {
       "name": "Arby's Roast Beef Restaurants",
@@ -77,7 +77,7 @@
     }
   },
   {
-    "model": "cafe.cafe",
+    "model": "cafe.Cafe",
     "pk": 79,
     "fields": {
       "name": "Red White & Blue Thrift Store",
@@ -88,7 +88,7 @@
     }
   },
   {
-    "model": "cafe.cafe",
+    "model": "cafe.Cafe",
     "pk": 80,
     "fields": {
       "name": "Remember When",
@@ -99,7 +99,7 @@
     }
   },
   {
-    "model": "cafe.cafe",
+    "model": "cafe.Cafe",
     "pk": 81,
     "fields": {
       "name": "Paul's Clock Repair",
@@ -110,7 +110,7 @@
     }
   },
   {
-    "model": "cafe.cafe",
+    "model": "cafe.Cafe",
     "pk": 82,
     "fields": {
       "name": "Pistella Beer Distributors",
@@ -121,7 +121,7 @@
     }
   },
   {
-    "model": "cafe.cafe",
+    "model": "cafe.Cafe",
     "pk": 83,
     "fields": {
       "name": "Animal Elegance",
@@ -132,7 +132,7 @@
     }
   },
   {
-    "model": "cafe.cafe",
+    "model": "cafe.Cafe",
     "pk": 84,
     "fields": {
       "name": "Pino's Contemporary Italian Restaurant & Wine Bar",
@@ -143,7 +143,7 @@
     }
   },
   {
-    "model": "cafe.cafe",
+    "model": "cafe.Cafe",
     "pk": 85,
     "fields": {
       "name": "Brunos Garage",
@@ -154,7 +154,7 @@
     }
   },
   {
-    "model": "cafe.cafe",
+    "model": "cafe.Cafe",
     "pk": 86,
     "fields": {
       "name": "Broadway Auto Parts",
@@ -165,7 +165,7 @@
     }
   },
   {
-    "model": "cafe.cafe",
+    "model": "cafe.Cafe",
     "pk": 87,
     "fields": {
       "name": "Bastone Auto Service",
@@ -176,7 +176,7 @@
     }
   },
   {
-    "model": "cafe.cafe",
+    "model": "cafe.Cafe",
     "pk": 88,
     "fields": {
       "name": "Giant Eagle",
@@ -187,7 +187,7 @@
     }
   },
   {
-    "model": "cafe.cafe",
+    "model": "cafe.Cafe",
     "pk": 89,
     "fields": {
       "name": "Supercuts",
@@ -198,7 +198,7 @@
     }
   },
   {
-    "model": "cafe.cafe",
+    "model": "cafe.Cafe",
     "pk": 90,
     "fields": {
       "name": "Eddie's Pizza Haus",
@@ -209,7 +209,7 @@
     }
   },
   {
-    "model": "cafe.cafe",
+    "model": "cafe.Cafe",
     "pk": 91,
     "fields": {
       "name": "Tasty Chinese Restaurant",
@@ -220,7 +220,7 @@
     }
   },
   {
-    "model": "cafe.cafe",
+    "model": "cafe.Cafe",
     "pk": 92,
     "fields": {
       "name": "Vento's Pizza",
@@ -231,7 +231,7 @@
     }
   },
   {
-    "model": "cafe.cafe",
+    "model": "cafe.Cafe",
     "pk": 93,
     "fields": {
       "name": "Minutello's Restaurant & Lounge",
@@ -242,7 +242,7 @@
     }
   },
   {
-    "model": "cafe.cafe",
+    "model": "cafe.Cafe",
     "pk": 94,
     "fields": {
       "name": "Mikes Auto Body",
@@ -253,7 +253,7 @@
     }
   },
   {
-    "model": "cafe.cafe",
+    "model": "cafe.Cafe",
     "pk": 95,
     "fields": {
       "name": "Animal Rescue League Shelter & Wildlife Center",
@@ -264,7 +264,7 @@
     }
   },
   {
-    "model": "cafe.cafe",
+    "model": "cafe.Cafe",
     "pk": 96,
     "fields": {
       "name": "Topline by Vincent",
@@ -275,7 +275,7 @@
     }
   },
   {
-    "model": "cafe.cafe",
+    "model": "cafe.Cafe",
     "pk": 97,
     "fields": {
       "name": "CVS Pharmacy",
@@ -286,7 +286,7 @@
     }
   },
   {
-    "model": "cafe.cafe",
+    "model": "cafe.Cafe",
     "pk": 98,
     "fields": {
       "name": "Goodyear Auto Service Center",
@@ -297,7 +297,7 @@
     }
   },
   {
-    "model": "cafe.cafe",
+    "model": "cafe.Cafe",
     "pk": 99,
     "fields": {
       "name": "Rockwel Realty",
@@ -308,7 +308,7 @@
     }
   },
   {
-    "model": "cafe.cafe",
+    "model": "cafe.Cafe",
     "pk": 100,
     "fields": {
       "name": "Enrico's Tazza D'oro Cafe & Espresso Bar",
@@ -319,7 +319,7 @@
     }
   },
   {
-    "model": "cafe.cafe",
+    "model": "cafe.Cafe",
     "pk": 101,
     "fields": {
       "name": "Club One",
@@ -330,7 +330,7 @@
     }
   },
   {
-    "model": "cafe.cafe",
+    "model": "cafe.Cafe",
     "pk": 102,
     "fields": {
       "name": "Buffalo Blues",
@@ -341,7 +341,7 @@
     }
   },
   {
-    "model": "cafe.cafe",
+    "model": "cafe.Cafe",
     "pk": 103,
     "fields": {
       "name": "China Garden",
@@ -352,7 +352,7 @@
     }
   },
   {
-    "model": "cafe.cafe",
+    "model": "cafe.Cafe",
     "pk": 104,
     "fields": {
       "name": "Arhaus Furniture",
@@ -363,7 +363,7 @@
     }
   },
   {
-    "model": "cafe.cafe",
+    "model": "cafe.Cafe",
     "pk": 105,
     "fields": {
       "name": "Smiley's Pet Pad",
@@ -374,7 +374,7 @@
     }
   },
   {
-    "model": "cafe.cafe",
+    "model": "cafe.Cafe",
     "pk": 106,
     "fields": {
       "name": "Shady Hill Chiropractic Clinic",
@@ -385,7 +385,7 @@
     }
   },
   {
-    "model": "cafe.cafe",
+    "model": "cafe.Cafe",
     "pk": 107,
     "fields": {
       "name": "Monro Muffler Brake & Service",
@@ -396,7 +396,7 @@
     }
   },
   {
-    "model": "cafe.cafe",
+    "model": "cafe.Cafe",
     "pk": 108,
     "fields": {
       "name": "McDonald's",
@@ -407,7 +407,7 @@
     }
   },
   {
-    "model": "cafe.cafe",
+    "model": "cafe.Cafe",
     "pk": 109,
     "fields": {
       "name": "Walter's Automotive",
@@ -418,7 +418,7 @@
     }
   },
   {
-    "model": "cafe.cafe",
+    "model": "cafe.Cafe",
     "pk": 110,
     "fields": {
       "name": "Kelly Strayhorn Theater",
@@ -429,7 +429,7 @@
     }
   },
   {
-    "model": "cafe.cafe",
+    "model": "cafe.Cafe",
     "pk": 111,
     "fields": {
       "name": "Ace Lock",
@@ -440,7 +440,7 @@
     }
   },
   {
-    "model": "cafe.cafe",
+    "model": "cafe.Cafe",
     "pk": 112,
     "fields": {
       "name": "Food Glorious Food",
@@ -451,7 +451,7 @@
     }
   },
   {
-    "model": "cafe.cafe",
+    "model": "cafe.Cafe",
     "pk": 113,
     "fields": {
       "name": "AAA",
@@ -462,7 +462,7 @@
     }
   },
   {
-    "model": "cafe.cafe",
+    "model": "cafe.Cafe",
     "pk": 114,
     "fields": {
       "name": "Carnegie Library of Pittsburgh - East Liberty",
@@ -473,7 +473,7 @@
     }
   },
   {
-    "model": "cafe.cafe",
+    "model": "cafe.Cafe",
     "pk": 115,
     "fields": {
       "name": "Shadow Lounge",
@@ -484,7 +484,7 @@
     }
   },
   {
-    "model": "cafe.cafe",
+    "model": "cafe.Cafe",
     "pk": 116,
     "fields": {
       "name": "The Home Depot",
@@ -495,7 +495,7 @@
     }
   },
   {
-    "model": "cafe.cafe",
+    "model": "cafe.Cafe",
     "pk": 117,
     "fields": {
       "name": "Pittsburgh Glass Center",
@@ -506,7 +506,7 @@
     }
   },
   {
-    "model": "cafe.cafe",
+    "model": "cafe.Cafe",
     "pk": 118,
     "fields": {
       "name": "Hairdressers II",
@@ -517,7 +517,7 @@
     }
   },
   {
-    "model": "cafe.cafe",
+    "model": "cafe.Cafe",
     "pk": 119,
     "fields": {
       "name": "Midas",
@@ -528,7 +528,7 @@
     }
   },
   {
-    "model": "cafe.cafe",
+    "model": "cafe.Cafe",
     "pk": 120,
     "fields": {
       "name": "Pizza Parma",
@@ -539,7 +539,7 @@
     }
   },
   {
-    "model": "cafe.cafe",
+    "model": "cafe.Cafe",
     "pk": 121,
     "fields": {
       "name": "Econowash Laundry",
@@ -550,7 +550,7 @@
     }
   },
   {
-    "model": "cafe.cafe",
+    "model": "cafe.Cafe",
     "pk": 122,
     "fields": {
       "name": "Whole Foods Market",
@@ -561,7 +561,7 @@
     }
   },
   {
-    "model": "cafe.cafe",
+    "model": "cafe.Cafe",
     "pk": 123,
     "fields": {
       "name": "AAMCO Transmissions & Total Car Care",
@@ -572,7 +572,7 @@
     }
   },
   {
-    "model": "cafe.cafe",
+    "model": "cafe.Cafe",
     "pk": 124,
     "fields": {
       "name": "Pittsburgh Indoor Tennis Club",
@@ -583,7 +583,7 @@
     }
   },
   {
-    "model": "cafe.cafe",
+    "model": "cafe.Cafe",
     "pk": 125,
     "fields": {
       "name": "Time Bomb Spot",
@@ -594,7 +594,7 @@
     }
   },
   {
-    "model": "cafe.cafe",
+    "model": "cafe.Cafe",
     "pk": 126,
     "fields": {
       "name": "Jimmy Tsang's Chinese Restaurant",
@@ -605,7 +605,7 @@
     }
   },
   {
-    "model": "cafe.cafe",
+    "model": "cafe.Cafe",
     "pk": 127,
     "fields": {
       "name": "Newman Chiropractic Center",
@@ -616,7 +616,7 @@
     }
   },
   {
-    "model": "cafe.cafe",
+    "model": "cafe.Cafe",
     "pk": 128,
     "fields": {
       "name": "Casbah",
@@ -627,7 +627,7 @@
     }
   },
   {
-    "model": "cafe.cafe",
+    "model": "cafe.Cafe",
     "pk": 129,
     "fields": {
       "name": "Quiet Storm Vegetarian & Vegan Cafe",
@@ -638,7 +638,7 @@
     }
   },
   {
-    "model": "cafe.cafe",
+    "model": "cafe.Cafe",
     "pk": 130,
     "fields": {
       "name": "Pizza Perfectta",
@@ -649,7 +649,7 @@
     }
   },
   {
-    "model": "cafe.cafe",
+    "model": "cafe.Cafe",
     "pk": 131,
     "fields": {
       "name": "Point Breeze Veterinary Clinic",
@@ -660,7 +660,7 @@
     }
   },
   {
-    "model": "cafe.cafe",
+    "model": "cafe.Cafe",
     "pk": 132,
     "fields": {
       "name": "Frick Park Market",
@@ -671,7 +671,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 1,
     "fields": {
       "cafe": 72,
@@ -679,7 +679,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 2,
     "fields": {
       "cafe": 72,
@@ -687,7 +687,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 3,
     "fields": {
       "cafe": 72,
@@ -695,7 +695,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 4,
     "fields": {
       "cafe": 72,
@@ -703,7 +703,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 5,
     "fields": {
       "cafe": 73,
@@ -711,7 +711,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 6,
     "fields": {
       "cafe": 73,
@@ -719,7 +719,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 7,
     "fields": {
       "cafe": 73,
@@ -727,7 +727,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 8,
     "fields": {
       "cafe": 73,
@@ -735,7 +735,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 9,
     "fields": {
       "cafe": 74,
@@ -743,7 +743,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 10,
     "fields": {
       "cafe": 74,
@@ -751,7 +751,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 11,
     "fields": {
       "cafe": 74,
@@ -759,7 +759,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 12,
     "fields": {
       "cafe": 74,
@@ -767,7 +767,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 13,
     "fields": {
       "cafe": 75,
@@ -775,7 +775,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 14,
     "fields": {
       "cafe": 75,
@@ -783,7 +783,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 15,
     "fields": {
       "cafe": 75,
@@ -791,7 +791,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 16,
     "fields": {
       "cafe": 75,
@@ -799,7 +799,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 17,
     "fields": {
       "cafe": 76,
@@ -807,7 +807,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 18,
     "fields": {
       "cafe": 76,
@@ -815,7 +815,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 19,
     "fields": {
       "cafe": 76,
@@ -823,7 +823,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 20,
     "fields": {
       "cafe": 76,
@@ -831,7 +831,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 21,
     "fields": {
       "cafe": 77,
@@ -839,7 +839,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 22,
     "fields": {
       "cafe": 77,
@@ -847,7 +847,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 23,
     "fields": {
       "cafe": 77,
@@ -855,7 +855,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 24,
     "fields": {
       "cafe": 77,
@@ -863,7 +863,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 25,
     "fields": {
       "cafe": 78,
@@ -871,7 +871,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 26,
     "fields": {
       "cafe": 78,
@@ -879,7 +879,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 27,
     "fields": {
       "cafe": 78,
@@ -887,7 +887,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 28,
     "fields": {
       "cafe": 78,
@@ -895,7 +895,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 29,
     "fields": {
       "cafe": 79,
@@ -903,7 +903,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 30,
     "fields": {
       "cafe": 79,
@@ -911,7 +911,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 31,
     "fields": {
       "cafe": 79,
@@ -919,7 +919,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 32,
     "fields": {
       "cafe": 79,
@@ -927,7 +927,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 33,
     "fields": {
       "cafe": 80,
@@ -935,7 +935,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 34,
     "fields": {
       "cafe": 80,
@@ -943,7 +943,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 35,
     "fields": {
       "cafe": 80,
@@ -951,7 +951,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 36,
     "fields": {
       "cafe": 80,
@@ -959,7 +959,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 37,
     "fields": {
       "cafe": 81,
@@ -967,7 +967,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 38,
     "fields": {
       "cafe": 81,
@@ -975,7 +975,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 39,
     "fields": {
       "cafe": 81,
@@ -983,7 +983,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 40,
     "fields": {
       "cafe": 81,
@@ -991,7 +991,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 41,
     "fields": {
       "cafe": 82,
@@ -999,7 +999,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 42,
     "fields": {
       "cafe": 82,
@@ -1007,7 +1007,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 43,
     "fields": {
       "cafe": 82,
@@ -1015,7 +1015,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 44,
     "fields": {
       "cafe": 82,
@@ -1023,7 +1023,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 45,
     "fields": {
       "cafe": 83,
@@ -1031,7 +1031,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 46,
     "fields": {
       "cafe": 83,
@@ -1039,7 +1039,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 47,
     "fields": {
       "cafe": 83,
@@ -1047,7 +1047,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 48,
     "fields": {
       "cafe": 83,
@@ -1055,7 +1055,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 49,
     "fields": {
       "cafe": 84,
@@ -1063,7 +1063,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 50,
     "fields": {
       "cafe": 84,
@@ -1071,7 +1071,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 51,
     "fields": {
       "cafe": 84,
@@ -1079,7 +1079,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 52,
     "fields": {
       "cafe": 84,
@@ -1087,7 +1087,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 53,
     "fields": {
       "cafe": 85,
@@ -1095,7 +1095,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 54,
     "fields": {
       "cafe": 85,
@@ -1103,7 +1103,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 55,
     "fields": {
       "cafe": 85,
@@ -1111,7 +1111,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 56,
     "fields": {
       "cafe": 85,
@@ -1119,7 +1119,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 57,
     "fields": {
       "cafe": 86,
@@ -1127,7 +1127,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 58,
     "fields": {
       "cafe": 86,
@@ -1135,7 +1135,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 59,
     "fields": {
       "cafe": 86,
@@ -1143,7 +1143,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 60,
     "fields": {
       "cafe": 86,
@@ -1151,7 +1151,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 61,
     "fields": {
       "cafe": 87,
@@ -1159,7 +1159,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 62,
     "fields": {
       "cafe": 87,
@@ -1167,7 +1167,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 63,
     "fields": {
       "cafe": 87,
@@ -1175,7 +1175,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 64,
     "fields": {
       "cafe": 87,
@@ -1183,7 +1183,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 65,
     "fields": {
       "cafe": 88,
@@ -1191,7 +1191,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 66,
     "fields": {
       "cafe": 88,
@@ -1199,7 +1199,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 67,
     "fields": {
       "cafe": 88,
@@ -1207,7 +1207,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 68,
     "fields": {
       "cafe": 88,
@@ -1215,7 +1215,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 69,
     "fields": {
       "cafe": 89,
@@ -1223,7 +1223,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 70,
     "fields": {
       "cafe": 89,
@@ -1231,7 +1231,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 71,
     "fields": {
       "cafe": 89,
@@ -1239,7 +1239,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 72,
     "fields": {
       "cafe": 89,
@@ -1247,7 +1247,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 73,
     "fields": {
       "cafe": 90,
@@ -1255,7 +1255,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 74,
     "fields": {
       "cafe": 90,
@@ -1263,7 +1263,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 75,
     "fields": {
       "cafe": 90,
@@ -1271,7 +1271,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 76,
     "fields": {
       "cafe": 90,
@@ -1279,7 +1279,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 77,
     "fields": {
       "cafe": 91,
@@ -1287,7 +1287,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 78,
     "fields": {
       "cafe": 91,
@@ -1295,7 +1295,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 79,
     "fields": {
       "cafe": 91,
@@ -1303,7 +1303,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 80,
     "fields": {
       "cafe": 91,
@@ -1311,7 +1311,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 81,
     "fields": {
       "cafe": 92,
@@ -1319,7 +1319,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 82,
     "fields": {
       "cafe": 92,
@@ -1327,7 +1327,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 83,
     "fields": {
       "cafe": 92,
@@ -1335,7 +1335,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 84,
     "fields": {
       "cafe": 92,
@@ -1343,7 +1343,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 85,
     "fields": {
       "cafe": 93,
@@ -1351,7 +1351,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 86,
     "fields": {
       "cafe": 93,
@@ -1359,7 +1359,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 87,
     "fields": {
       "cafe": 93,
@@ -1367,7 +1367,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 88,
     "fields": {
       "cafe": 93,
@@ -1375,7 +1375,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 89,
     "fields": {
       "cafe": 94,
@@ -1383,7 +1383,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 90,
     "fields": {
       "cafe": 94,
@@ -1391,7 +1391,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 91,
     "fields": {
       "cafe": 94,
@@ -1399,7 +1399,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 92,
     "fields": {
       "cafe": 94,
@@ -1407,7 +1407,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 93,
     "fields": {
       "cafe": 95,
@@ -1415,7 +1415,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 94,
     "fields": {
       "cafe": 95,
@@ -1423,7 +1423,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 95,
     "fields": {
       "cafe": 95,
@@ -1431,7 +1431,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 96,
     "fields": {
       "cafe": 95,
@@ -1439,7 +1439,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 97,
     "fields": {
       "cafe": 96,
@@ -1447,7 +1447,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 98,
     "fields": {
       "cafe": 96,
@@ -1455,7 +1455,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 99,
     "fields": {
       "cafe": 96,
@@ -1463,7 +1463,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 100,
     "fields": {
       "cafe": 96,
@@ -1471,7 +1471,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 101,
     "fields": {
       "cafe": 97,
@@ -1479,7 +1479,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 102,
     "fields": {
       "cafe": 97,
@@ -1487,7 +1487,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 103,
     "fields": {
       "cafe": 97,
@@ -1495,7 +1495,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 104,
     "fields": {
       "cafe": 97,
@@ -1503,7 +1503,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 105,
     "fields": {
       "cafe": 98,
@@ -1511,7 +1511,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 106,
     "fields": {
       "cafe": 98,
@@ -1519,7 +1519,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 107,
     "fields": {
       "cafe": 98,
@@ -1527,7 +1527,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 108,
     "fields": {
       "cafe": 98,
@@ -1535,7 +1535,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 109,
     "fields": {
       "cafe": 99,
@@ -1543,7 +1543,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 110,
     "fields": {
       "cafe": 99,
@@ -1551,7 +1551,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 111,
     "fields": {
       "cafe": 99,
@@ -1559,7 +1559,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 112,
     "fields": {
       "cafe": 99,
@@ -1567,7 +1567,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 113,
     "fields": {
       "cafe": 100,
@@ -1575,7 +1575,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 114,
     "fields": {
       "cafe": 100,
@@ -1583,7 +1583,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 115,
     "fields": {
       "cafe": 100,
@@ -1591,7 +1591,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 116,
     "fields": {
       "cafe": 100,
@@ -1599,7 +1599,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 117,
     "fields": {
       "cafe": 101,
@@ -1607,7 +1607,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 118,
     "fields": {
       "cafe": 101,
@@ -1615,7 +1615,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 119,
     "fields": {
       "cafe": 101,
@@ -1623,7 +1623,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 120,
     "fields": {
       "cafe": 101,
@@ -1631,7 +1631,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 121,
     "fields": {
       "cafe": 102,
@@ -1639,7 +1639,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 122,
     "fields": {
       "cafe": 102,
@@ -1647,7 +1647,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 123,
     "fields": {
       "cafe": 102,
@@ -1655,7 +1655,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 124,
     "fields": {
       "cafe": 102,
@@ -1663,7 +1663,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 125,
     "fields": {
       "cafe": 103,
@@ -1671,7 +1671,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 126,
     "fields": {
       "cafe": 103,
@@ -1679,7 +1679,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 127,
     "fields": {
       "cafe": 103,
@@ -1687,7 +1687,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 128,
     "fields": {
       "cafe": 103,
@@ -1695,7 +1695,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 129,
     "fields": {
       "cafe": 104,
@@ -1703,7 +1703,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 130,
     "fields": {
       "cafe": 104,
@@ -1711,7 +1711,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 131,
     "fields": {
       "cafe": 104,
@@ -1719,7 +1719,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 132,
     "fields": {
       "cafe": 104,
@@ -1727,7 +1727,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 133,
     "fields": {
       "cafe": 105,
@@ -1735,7 +1735,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 134,
     "fields": {
       "cafe": 105,
@@ -1743,7 +1743,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 135,
     "fields": {
       "cafe": 105,
@@ -1751,7 +1751,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 136,
     "fields": {
       "cafe": 105,
@@ -1759,7 +1759,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 137,
     "fields": {
       "cafe": 106,
@@ -1767,7 +1767,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 138,
     "fields": {
       "cafe": 106,
@@ -1775,7 +1775,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 139,
     "fields": {
       "cafe": 106,
@@ -1783,7 +1783,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 140,
     "fields": {
       "cafe": 106,
@@ -1791,7 +1791,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 141,
     "fields": {
       "cafe": 107,
@@ -1799,7 +1799,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 142,
     "fields": {
       "cafe": 107,
@@ -1807,7 +1807,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 143,
     "fields": {
       "cafe": 107,
@@ -1815,7 +1815,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 144,
     "fields": {
       "cafe": 107,
@@ -1823,7 +1823,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 145,
     "fields": {
       "cafe": 108,
@@ -1831,7 +1831,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 146,
     "fields": {
       "cafe": 108,
@@ -1839,7 +1839,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 147,
     "fields": {
       "cafe": 108,
@@ -1847,7 +1847,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 148,
     "fields": {
       "cafe": 108,
@@ -1855,7 +1855,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 149,
     "fields": {
       "cafe": 109,
@@ -1863,7 +1863,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 150,
     "fields": {
       "cafe": 109,
@@ -1871,7 +1871,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 151,
     "fields": {
       "cafe": 109,
@@ -1879,7 +1879,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 152,
     "fields": {
       "cafe": 109,
@@ -1887,7 +1887,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 153,
     "fields": {
       "cafe": 110,
@@ -1895,7 +1895,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 154,
     "fields": {
       "cafe": 110,
@@ -1903,7 +1903,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 155,
     "fields": {
       "cafe": 110,
@@ -1911,7 +1911,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 156,
     "fields": {
       "cafe": 110,
@@ -1919,7 +1919,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 157,
     "fields": {
       "cafe": 111,
@@ -1927,7 +1927,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 158,
     "fields": {
       "cafe": 111,
@@ -1935,7 +1935,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 159,
     "fields": {
       "cafe": 111,
@@ -1943,7 +1943,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 160,
     "fields": {
       "cafe": 111,
@@ -1951,7 +1951,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 161,
     "fields": {
       "cafe": 112,
@@ -1959,7 +1959,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 162,
     "fields": {
       "cafe": 112,
@@ -1967,7 +1967,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 163,
     "fields": {
       "cafe": 112,
@@ -1975,7 +1975,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 164,
     "fields": {
       "cafe": 112,
@@ -1983,7 +1983,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 165,
     "fields": {
       "cafe": 113,
@@ -1991,7 +1991,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 166,
     "fields": {
       "cafe": 113,
@@ -1999,7 +1999,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 167,
     "fields": {
       "cafe": 113,
@@ -2007,7 +2007,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 168,
     "fields": {
       "cafe": 113,
@@ -2015,7 +2015,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 169,
     "fields": {
       "cafe": 114,
@@ -2023,7 +2023,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 170,
     "fields": {
       "cafe": 114,
@@ -2031,7 +2031,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 171,
     "fields": {
       "cafe": 114,
@@ -2039,7 +2039,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 172,
     "fields": {
       "cafe": 114,
@@ -2047,7 +2047,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 173,
     "fields": {
       "cafe": 115,
@@ -2055,7 +2055,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 174,
     "fields": {
       "cafe": 115,
@@ -2063,7 +2063,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 175,
     "fields": {
       "cafe": 115,
@@ -2071,7 +2071,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 176,
     "fields": {
       "cafe": 115,
@@ -2079,7 +2079,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 177,
     "fields": {
       "cafe": 116,
@@ -2087,7 +2087,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 178,
     "fields": {
       "cafe": 116,
@@ -2095,7 +2095,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 179,
     "fields": {
       "cafe": 116,
@@ -2103,7 +2103,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 180,
     "fields": {
       "cafe": 116,
@@ -2111,7 +2111,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 181,
     "fields": {
       "cafe": 117,
@@ -2119,7 +2119,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 182,
     "fields": {
       "cafe": 117,
@@ -2127,7 +2127,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 183,
     "fields": {
       "cafe": 117,
@@ -2135,7 +2135,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 184,
     "fields": {
       "cafe": 117,
@@ -2143,7 +2143,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 185,
     "fields": {
       "cafe": 118,
@@ -2151,7 +2151,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 186,
     "fields": {
       "cafe": 118,
@@ -2159,7 +2159,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 187,
     "fields": {
       "cafe": 118,
@@ -2167,7 +2167,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 188,
     "fields": {
       "cafe": 118,
@@ -2175,7 +2175,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 189,
     "fields": {
       "cafe": 119,
@@ -2183,7 +2183,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 190,
     "fields": {
       "cafe": 119,
@@ -2191,7 +2191,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 191,
     "fields": {
       "cafe": 119,
@@ -2199,7 +2199,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 192,
     "fields": {
       "cafe": 119,
@@ -2207,7 +2207,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 193,
     "fields": {
       "cafe": 120,
@@ -2215,7 +2215,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 194,
     "fields": {
       "cafe": 120,
@@ -2223,7 +2223,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 195,
     "fields": {
       "cafe": 120,
@@ -2231,7 +2231,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 196,
     "fields": {
       "cafe": 120,
@@ -2239,7 +2239,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 197,
     "fields": {
       "cafe": 121,
@@ -2247,7 +2247,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 198,
     "fields": {
       "cafe": 121,
@@ -2255,7 +2255,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 199,
     "fields": {
       "cafe": 121,
@@ -2263,7 +2263,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 200,
     "fields": {
       "cafe": 121,
@@ -2271,7 +2271,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 201,
     "fields": {
       "cafe": 122,
@@ -2279,7 +2279,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 202,
     "fields": {
       "cafe": 122,
@@ -2287,7 +2287,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 203,
     "fields": {
       "cafe": 122,
@@ -2295,7 +2295,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 204,
     "fields": {
       "cafe": 122,
@@ -2303,7 +2303,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 205,
     "fields": {
       "cafe": 123,
@@ -2311,7 +2311,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 206,
     "fields": {
       "cafe": 123,
@@ -2319,7 +2319,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 207,
     "fields": {
       "cafe": 123,
@@ -2327,7 +2327,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 208,
     "fields": {
       "cafe": 123,
@@ -2335,7 +2335,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 209,
     "fields": {
       "cafe": 124,
@@ -2343,7 +2343,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 210,
     "fields": {
       "cafe": 124,
@@ -2351,7 +2351,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 211,
     "fields": {
       "cafe": 124,
@@ -2359,7 +2359,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 212,
     "fields": {
       "cafe": 124,
@@ -2367,7 +2367,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 213,
     "fields": {
       "cafe": 125,
@@ -2375,7 +2375,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 214,
     "fields": {
       "cafe": 125,
@@ -2383,7 +2383,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 215,
     "fields": {
       "cafe": 125,
@@ -2391,7 +2391,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 216,
     "fields": {
       "cafe": 125,
@@ -2399,7 +2399,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 217,
     "fields": {
       "cafe": 126,
@@ -2407,7 +2407,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 218,
     "fields": {
       "cafe": 126,
@@ -2415,7 +2415,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 219,
     "fields": {
       "cafe": 126,
@@ -2423,7 +2423,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 220,
     "fields": {
       "cafe": 126,
@@ -2431,7 +2431,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 221,
     "fields": {
       "cafe": 127,
@@ -2439,7 +2439,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 222,
     "fields": {
       "cafe": 127,
@@ -2447,7 +2447,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 223,
     "fields": {
       "cafe": 127,
@@ -2455,7 +2455,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 224,
     "fields": {
       "cafe": 127,
@@ -2463,7 +2463,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 225,
     "fields": {
       "cafe": 128,
@@ -2471,7 +2471,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 226,
     "fields": {
       "cafe": 128,
@@ -2479,7 +2479,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 227,
     "fields": {
       "cafe": 128,
@@ -2487,7 +2487,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 228,
     "fields": {
       "cafe": 128,
@@ -2495,7 +2495,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 229,
     "fields": {
       "cafe": 129,
@@ -2503,7 +2503,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 230,
     "fields": {
       "cafe": 129,
@@ -2511,7 +2511,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 231,
     "fields": {
       "cafe": 129,
@@ -2519,7 +2519,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 232,
     "fields": {
       "cafe": 129,
@@ -2527,7 +2527,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 233,
     "fields": {
       "cafe": 130,
@@ -2535,7 +2535,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 234,
     "fields": {
       "cafe": 130,
@@ -2543,7 +2543,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 235,
     "fields": {
       "cafe": 130,
@@ -2551,7 +2551,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 236,
     "fields": {
       "cafe": 130,
@@ -2559,7 +2559,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 237,
     "fields": {
       "cafe": 131,
@@ -2567,7 +2567,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 238,
     "fields": {
       "cafe": 131,
@@ -2575,7 +2575,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 239,
     "fields": {
       "cafe": 131,
@@ -2583,7 +2583,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 240,
     "fields": {
       "cafe": 131,
@@ -2591,7 +2591,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 241,
     "fields": {
       "cafe": 132,
@@ -2599,7 +2599,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 242,
     "fields": {
       "cafe": 132,
@@ -2607,7 +2607,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 243,
     "fields": {
       "cafe": 132,
@@ -2615,7 +2615,7 @@
     }
   },
   {
-    "model": "cafe.cafeimage",
+    "model": "cafe.Cafeimage",
     "pk": 244,
     "fields": {
       "cafe": 132,

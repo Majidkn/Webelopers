@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-{% load staticfiles %}
+{% load static %}
 
 <html lang="fa">
 <head>
     <meta charset="UTF-8">
     <title>CafeYaab</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{% static "style.css" %}">
     <link rel="stylesheet" href="{% static "jquery-ui.css" %}" type="text/css" media="all"/>
     <script src="{% static "script/jquery.js" %}"></script>
@@ -28,6 +29,7 @@
             <li class="pull-right"><a href="/logout">Logout</a></li>
             <li class="pull-right"><a href="/profile">Profile</a></li>
             <li class="pull-right"><a href="/profile/add_cafe">Add New Cafe</a></li>
+            <li class="pull-right"><a href="/editprofile">Edit Profile</a></li>
         {% else %}
             <li class="pull-right"><a href="/login">Login</a></li>
             <li class="pull-right"><a href="/signup">Signup</a></li>
@@ -43,41 +45,45 @@
 
 
 <script type="text/javascript">
-    $(".searchInput").autocomplete({
-        source: "/cafes/get_cafes/",
-        minLength: 2,
-        select: function (event, ui) {
-            $(".searchInput").val(ui.item.value);
-            $("#searchForm").submit();
-        }
-    });
-    $(function () {
-        $('img.captcha').after(
-            $('<a href="#void" class="captcha-refresh"><button class="btn btn-warning">Refresh</button></a>')
-        );
+    $("input").addClass("form-control")
+        $("small").addClass("form-text text-muted")
+        $("#id_captcha_1").css("display", "inline-block")
+        $("img.captcha").css("margin-right", "20px").css("display","inline-block")
 
-        // Click-handler for the refresh-link
-        $('.captcha-refresh').click(function () {
-            var $form = $(this).parents('form');
-            var url = location.protocol + "//" + window.location.hostname + ":"
-                + location.port + "/captcha/refresh/";
+            $(function() {
+                // Add refresh button after field (this can be done in the template as well)
+                $('img.captcha').after(
+                        $('<a href="#void" class="captcha-refresh"><button class="btn btn-warning">Refresh</button></a>')
+                        );
 
-            // Make the AJAX-call
-            $.getJSON(url, {}, function (json) {
-                $form.find('input[name="captcha_0"]').val(json.key);
-                $form.find('img.captcha').attr('src', json.image_url);
+                // Click-handler for the refresh-link
+                $('.captcha-refresh').click(function(){
+                    var $form = $(this).parents('form');
+                    var url = location.protocol + "//" + window.location.hostname + ":"
+                              + location.port + "/captcha/refresh/";
+
+                    // Make the AJAX-call
+                    $.getJSON(url, {}, function(json) {
+                        $form.find('input[name="captcha_0"]').val(json.key);
+                        $form.find('img.captcha').attr('src', json.image_url);
+                    });
+
+                    return false;
+                });
             });
 
-            return false;
-        });
-        $("input").addClass("form-control");
-        $("small").addClass("form-text text-muted");
-        $("#id_captcha_1").css("display", "inline-block");
-    });
-
-
-    $("img.captcha").css("margin-right", "20px").css("display", "inline-block");
-
+            $(".searchInput").autocomplete({
+                source: "/cafes/get_cafes/",
+                minLength: 2,
+                select: function (event, ui) {
+                    $(".searchInput").val(ui.item.value);
+                    $("#searchForm").submit();
+                }
+            })
+    var search = document.getElementById('search');
+    if (window.location.toString().split('/')[3] == 'cafes') {
+        search.style.display = "inline-block";
+    }
 </script>
 </body>
 </html>

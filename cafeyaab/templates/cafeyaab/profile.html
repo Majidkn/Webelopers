@@ -1,21 +1,34 @@
 {% extends 'cafeyaab/__base.html' %}
+{% load staticfiles %}
 {% block content %}
+    <img style="margin:20px auto; max-height: 250px; text-align: center; display: block"
+         src="{{ user.profile_pic.url }}">
+
     <p style="text-align: center"> Hi {{ user.username }}</p>
     <p style="text-align: center"> Your Name: {{ user.first_name }}</p>
     <p style="text-align: center"> Your Email: {{ user.email }}</p>
+    <h3 style="text-align: center">Favorite List</h3>
+    <ul style="text-align: center;padding:0px">
+        {% for cafe in user.fav_list.all %}
+            <li>{{ cafe }}</li>
+        {% endfor %}
+    </ul>
     <p style="text-align: center">My Cafes : </p><br>
-    <div style="margin: 0 auto;display: block;width: 50%;text-align: center;">
-        {% for cafe in cafes %}
-            {% if cafe.name %}
-                <div class="cafe">
-                    <img class="cafe-main-image" src="{{ cafe.main_image_url }}" alt="">
-                    <div class="cafe-info">
+    <div style="margin: 0 auto;display: block;width: 50%">
+        <div class="col-sm-6">
+
+            {% for cafe in cafes %}
+                {% if cafe.name %}
+                    <div class="cafe">
+                        <img class="cafe-main-image" src="{{ cafe.main_image_url }}" alt="">
+                        <div class="cafe-info">
                         <span><a href="cafes/{{ cafe.id }}">{{ cafe.name }}{% if not cafe.activated %} (Not
                             Activated){% endif %}</a></span><br>
-                        <span style="position: relative; top: 20px;">{{ cafe.description }}</span>
+                            <span style="position: relative; top: 20px;">{{ cafe.description }}</span>
+                        </div>
                     </div>
-                </div>
-            {% endif %}
-        {% endfor %}
+                {% endif %}
+            {% endfor %}
+        </div>
     </div>
 {% endblock %}

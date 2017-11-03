@@ -4,6 +4,12 @@ from __future__ import unicode_literals
 import user
 from django.contrib.auth.models import User
 from django.http import HttpResponse
+from django.http import HttpResponseRedirect
+
+from cafeyaab.models import User as user
+from django.contrib.auth.models import User
+from django.http import HttpResponse
+from django.shortcuts import get_object_or_404
 
 from .models import Cafe, CafeImage, Comment
 
@@ -76,3 +82,19 @@ def show_comment(request, cafe_id, comment_id):
         return redirect('/cafes/' + str(cafe_id))
     else:
         return redirect('/cafes/' + str(cafe_id))
+
+def favit(request, cafeid):
+    print("Entered")
+    user = request.user
+    if user.fav_list.filter(id=cafeid).exists():
+        user.fav_list.remove(get_object_or_404(Cafe, pk=cafeid))
+        mycafe = Cafe.objects.get(pk=cafeid)
+        mycafe.popularity -= 1
+        mycafe.save()
+
+    else:
+        user.fav_list.add(get_object_or_404(Cafe, pk=cafeid))
+        mycafe = Cafe.objects.get(pk=cafeid)
+        mycafe.popularity += 1
+        mycafe.save()
+    return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
