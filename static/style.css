@@ -88,6 +88,15 @@ input[name="profile_pic"] {
     bottom: 3px;
 }
 
+.author_picture {
+    width: 90px;
+    height: 90px;
+    float: left;
+    border-radius: 50%;
+    border: 3px solid #f7f7f7;
+    padding: 1px;
+}
+
 #map {
     height: calc(94vh + 5px);
     position: fixed !important;

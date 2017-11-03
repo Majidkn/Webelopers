@@ -1,18 +1,20 @@
 {% for comment in comments %}
     {% if not user.is_superuser and comment.show or user.is_superuser %}
-        <div style="float: left;width: 450px;background: #f7f7f7;padding: 20px;margin-bottom: 20px;display: block; clear: both;"
-             class="comment">
-            {% if user.is_superuser %}
-                {% if comment.show %}
-                    <span onclick="window.location = '{{ cafe.id }}/comments/{{ comment.id }}/change_visibility'"
-                          class="glyphicon glyphicon-remove pull-right"></span>
-                {% else %}
-                    <span onclick="window.location = '{{ cafe.id }}/comments/{{ comment.id }}/change_visibility'"
-                          class="glyphicon glyphicon-plus pull-right"></span>
+        <img class="author_picture" src="/media/{{ comment.author.profile_pic }}" alt="">
+        <div class="comments col-sm-12" style="width: calc(100% - 90px)">
+            <div class="comment" style="float: left;width: 450px;background: #f7f7f7;padding: 20px;margin-bottom: 20px;display: block;"">
+                {% if user.is_superuser %}
+                    {% if comment.show %}
+                        <span onclick="window.location = '{{ cafe.id }}/comments/{{ comment.id }}/change_visibility'"
+                              class="glyphicon glyphicon-remove pull-right"></span>
+                    {% else %}
+                        <span onclick="window.location = '{{ cafe.id }}/comments/{{ comment.id }}/change_visibility'"
+                              class="glyphicon glyphicon-plus pull-right"></span>
+                    {% endif %}
                 {% endif %}
-            {% endif %}
-            <span><a href="/profiles/{{ comment.author }}">{{ comment.author }}</a>:</span>
-            <p>{{ comment.text }}</p>
+                <span><a href="/profiles/{{ comment.author }}">{{ comment.author }}</a>:</span>
+                <p>{{ comment.text }}</p>
+            </div>
         </div>
     {% endif %}
 {% endfor %}
