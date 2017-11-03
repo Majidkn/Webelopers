@@ -1,0 +1,15 @@
+{% extends 'cafeyaab/__base.html' %}
+{% load staticfiles %}
+{% block content %}
+    <img style="margin:20px auto; max-height: 250px; text-align: center; display: block" src="{{user.profile_pic.url}}">
+
+    <p style="text-align: center"> Hi {{user.username}}</p>
+    <p style="text-align: center"> Your Name: {{user.first_name}}</p>
+    <p style="text-align: center"> Your Email: {{user.email}}</p>
+    <h3 style="text-align: center">Favorite List</h3>
+    <ul style="text-align: center;padding:0px">
+        {% for cafe in user.fav_list.all %}
+            <li>{{cafe}}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

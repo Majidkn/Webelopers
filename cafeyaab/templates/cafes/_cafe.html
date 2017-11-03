@@ -1,0 +1,75 @@
+{% extends 'cafeyaab/__base.html' %}
+{% block content %}
+    <div class="col-sm-12">
+        <div class="cafe">
+            {#            <div class="owl-carousel owl-theme">#}
+            {#                {% for image in images %}#}
+            {#                    <div class="item">#}
+            {#                        <img class="owl-lazy" data-src="{{ image.image_url }}">#}
+            {#                    </div>#}
+            {#                {% endfor %}#}
+            {#            </div>#}
+            <img class="cafe-main-image" src="{{ cafe.main_image_url }}" alt="">
+            <div class="cafe-info">
+                <div class="popularity">
+                    {% if cafe in user.fav_list.all %}
+                        <i onclick="window.location = '{{cafe.id}}/favit'" class="fa fa-lg fa-heart"
+                       aria-hidden="true" style="color:red"></i>
+                    {% else %}
+                        <i onclick="window.location = '{{cafe.id}}/favit'" class="fa fa-lg fa-heart"
+                            aria-hidden="true" style="color:#ccc"></i>
+                    {% endif %}
+                    <span>{{cafe.popularity}}</span>
+                </div>
+                <span>{{ cafe.name }}</span><br>
+                <span style="position: relative; top: 20px;">{{ cafe.description }}</span>
+            </div>
+        </div>
+        <hr>
+
+    </div>
+    <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#comments">Comments</a></li>
+        <li><a data-toggle="tab" href="#mapp">Map</a></li>
+    </ul>
+    <div class="tab-content">
+        <div id="comments" class="tab-pane fade in active" style="padding: 20px;">
+            {% for comment in comments %}
+                {% if not user.is_superuser and comment.show or user.is_superuser %}
+                    <div style="float: left;width: 450px;background: #f7f7f7;padding: 20px;margin-bottom: 20px;display: block; clear: both;"
+                         class="comment">
+                        {% if user.is_superuser %}
+                            {% if comment.show %}
+                                <span onclick="window.location = '{{ cafe.id }}/comments/{{ comment.id }}/hide'"
+                                      class="glyphicon glyphicon-remove pull-right"></span>
+                            {% else %}
+                                <span onclick="window.location = '{{ cafe.id }}/comments/{{ comment.id }}/show'"
+                                      class="glyphicon glyphicon-plus pull-right"></span>
+                            {% endif %}
+                        {% endif %}
+                        <span><a href="/profiles/{{ comment.author }}">{{ comment.author }}</a>:</span>
+                        <p>{{ comment.text }}</p>
+                    </div>
+                {% endif %}
+            {% endfor %}
+            {% if user.is_authenticated %}
+                <form action="{{ cafe.id }}/comment" method="post" style="clear: both;">
+                    <div class="form-group">
+                        {% csrf_token %}
+                        <textarea style="width: 450px;margin-bottom: 20px;" class="form-control" rows="10"
+                                  name="text"></textarea>
+                        <button class="btn btn-success" type="submit">Submit</button>
+                    </div>
+                </form>
+            {% endif %}
+        </div>
+        <div id="mapp" class="tab-pane fade">
+
+        </div>
+    </div>
+    <script>
+        hideComment = (comment) => {
+            console.log(comment);
+        }
+    </script>
+{% endblock %}

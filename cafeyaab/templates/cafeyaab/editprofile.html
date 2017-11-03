@@ -1,0 +1,26 @@
+{% extends 'cafeyaab/__base.html' %}
+
+{% block content %}
+  <div class="col-sm-4">
+  <h2>Edit Profile</h2>
+  <form method="post" enctype="multipart/form-data">
+      <div class="form-group">
+    {% csrf_token %}
+    {% for field in form %}
+      <p>
+        {{ field.label_tag }}<br>
+        {{ field }}
+        {% if field.help_text %}
+          <small style="color: grey">{{ field.help_text }}</small>
+        {% endif %}
+        {% for error in field.errors %}
+          <p style="color: red">{{ error }}</p>
+        {% endfor %}
+      </p>
+    {% endfor %}
+    <button class="btn btn-success" type="submit">Edit Profile</button>
+        <span onclick="window.location = '/profile/{{userId}}/delete_image'">delete</span>
+      </div>
+  </form>
+  </div>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'cafeyaab/__base.html' %}
+
+{% block content %}
+{% if user.username %}
+        <span>You're Already Logged in</span>
+{% else %}
+  <div class="col-sm-4">
+  <h2>Sign up</h2>
+  <form method="post">
+      <div class="form-group">
+    {% csrf_token %}
+    {% for field in form %}
+      <p>
+        {{ field.label_tag }}<br>
+        {{ field }}
+        {% if field.help_text %}
+          <small style="color: grey">{{ field.help_text }}</small>
+        {% endif %}
+        {% for error in field.errors %}
+          <p style="color: red">{{ error }}</p>
+        {% endfor %}
+      </p>
+    {% endfor %}
+    <button class="btn btn-success" type="submit">Sign up</button>
+      </div>
+  </form>
+  </div>
+{% endif %}
+{% endblock %}
