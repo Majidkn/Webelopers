@@ -1,6 +1,6 @@
 {% extends 'cafeyaab/__base.html' %}
 {% block content %}
-    {% if user.is_authenticated  %}
+    {% if user.is_authenticated %}
         <span style="text-align: center"> You're Logged in as {{ user.username }}</span>
     {% endif %}
 {% endblock %}

@@ -1,6 +1,21 @@
 {% extends 'cafeyaab/__base.html' %}
 {% block content %}
-    <p style="text-align: center"> Hi {{user.username}}</p>
-    <p style="text-align: center"> Your Name: {{user.firs_tname}}</p>
-    <p style="text-align: center"> Your Email: {{user.email}}</p>
+    <p style="text-align: center"> Hi {{ user.username }}</p>
+    <p style="text-align: center"> Your Name: {{ user.first_name }}</p>
+    <p style="text-align: center"> Your Email: {{ user.email }}</p>
+    <p style="text-align: center">My Cafes : </p><br>
+    <div style="margin: 0 auto;display: block;width: 50%;text-align: center;">
+        {% for cafe in cafes %}
+            {% if cafe.name %}
+                <div class="cafe">
+                    <img class="cafe-main-image" src="{{ cafe.main_image_url }}" alt="">
+                    <div class="cafe-info">
+                        <span><a href="cafes/{{ cafe.id }}">{{ cafe.name }}{% if not cafe.activated %} (Not
+                            Activated){% endif %}</a></span><br>
+                        <span style="position: relative; top: 20px;">{{ cafe.description }}</span>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
 {% endblock %}

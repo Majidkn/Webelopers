@@ -1,36 +1,42 @@
 {% extends 'cafeyaab/__base.html' %}
 {% block content %}
-    <div class="cafe-list col-sm-6">
-        {% if query %}
-            <span style="padding-bottom: 10px;display: block;">You've Searched For <b>{{ query }}</b></span>
-        {% endif %}
-        {% for cafe in cafes %}
-            {% if cafe.name %}
-                <div class="cafe col-sm-12">
-                    <img class="cafe-main-image" src="{{ cafe.main_image_url }}" alt="">
-                    <div class="cafe-info">
-                        <span><a href="{{ cafe.id }}">{{ cafe.name }}</a></span><br>
-                        <span style="position: relative; top: 20px;">{{ cafe.description }}</span>
-                    </div>
-                </div>
-            {% endif %}
-        {% endfor %}
-    </div>
-    <div class="col-sm-6" id="map" style="overflow: visible;">
+    <form action="/profile/add_cafe" method="POST">
+        {% csrf_token %}
+        <div style="display: block;margin: 0 auto;max-width: 300px;position: relative;padding-top: 50px">
+            <div class="form-group">
+                <p>
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" required>
+                </p>
+                <p>
+                    <label for="description">Description:</label>
+                    <textarea class="form-control" type="text" name="description"></textarea>
+                </p>
+                <p>
+                    <label for="main_image_url">Image Url:</label>
+
+                    <input type="text" name="main_image_url" required>
+                </p>
+                <input type="hidden" name="latitude" required>
+                <input type="hidden" name="longitude" required>
+                <button type="submit" class="btn btn-success">Submit</button>
+            </div>
+        </div>
+    </form>
+    <div id="mapp"
+         style="overflow: hidden; position: relative !important;width: 50%;height: 500px;margin: 40px auto;text-align: center;"></div>
+
     </div>
     <script type="text/javascript">
+        $(document).on('position-changed', (data) => {
+            console.log(data);
+            $('input[name="latitude"]').val(data.lat);
+            $('input[name="longitude"]').val(data.lng);
+        });
         initMap = function () {
-            var locations = [], latSum = 0, lngSum = 0;
-            {% for cafe in cafes %}
-                locations.push(['{{ cafe.name }}', '{{ cafe.latitude }}', '{{ cafe.longitude }}', "{{ cafe.description|linebreaks }}", {{ cafe.id }}]);
-                latSum += +'{{ cafe.latitude }}';
-                lngSum += +'{{ cafe.longitude }}';
-            {% endfor %}
-            centerLat = latSum / +'{{ cafes|length }}';
-            centerLng = lngSum / +'{{ cafes|length }}';
-            var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 10,
-                center: new google.maps.LatLng(centerLat, centerLng),
+            var map = new google.maps.Map(document.getElementById('mapp'), {
+                zoom: 5,
+                center: new google.maps.LatLng(40.3912, -80.073426),
                 mapTypeControl: false,
                 styles: [
                     {
@@ -326,28 +332,46 @@
                     }
                 ]
             });
+            (navigator.geolocation) ?
+                navigator.geolocation.getCurrentPosition(showPosition) :
+                alert("Geolocation is not supported by this browser.");
 
-            for (let i = 0; i < locations.length; i++) {
-                let marker = new google.maps.Marker({
-                    position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-                    map: map,
-                    icon: '/static/marker.png'
-                });
-                let content = '<div>' + locations[i][0] + '</div><br><div>' + locations[i][3] + '</div><br><a href="' + locations[i][4] + '">Enter Cafe</a>';
-                let infowindow = new google.maps.InfoWindow({
-                    content: content,
-                    maxWidth: 350
-                });
-
-
-                google.maps.event.addListener(marker, 'click', function () {
-                    infowindow.open(map, marker);
-                });
-
-                google.maps.event.addListener(map, 'click', function () {
-                    infowindow.close();
-                });
+            function showPosition(position) {
+                let lat = position.coords.latitude;
+                let lng = position.coords.longitude;
+                map.setCenter(new google.maps.LatLng(lat, lng));
+                map.setZoom(15);
             }
+
+            var markers = [];
+            google.maps.event.addListener(map, 'click', function (event) {
+                if (!markers.length) {
+                    marker = new google.maps.Marker({
+                        position: event.latLng,
+                        map: map,
+                        draggable: true,
+                        icon: "/static/marker.png"
+                    });
+                    markers.push(marker);
+                    let latLng = event.latLng;
+                    $(document).trigger({
+                        type: "position-changed",
+                        lat: latLng.lat(),
+                        lng: latLng.lng()
+                    });
+                    google.maps.event.addListener(map, 'mouseup', function (event) {
+                        let latLng = event.latLng;
+                        $(document).trigger({
+                            type: "position-changed",
+                            lat: latLng.lat(),
+                            lng: latLng.lng()
+                        });
+                    });
+
+                }
+
+            });
+
         }
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTpdUDVpmjWPDZZY_JLAE53ITYdZUSdL0&callback=initMap"

@@ -1,18 +1,21 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
+import user
+from django.contrib.auth.models import User
 from django.http import HttpResponse
 
-from .models import Cafe, CafeImage
+from .models import Cafe, CafeImage, Comment
 
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 import json
+from .forms import CommentForm
 
 
 def get_cafes(request):
     results = []
     if request.is_ajax():
-        cafes = Cafe.objects.filter(name__contains=request.GET.get('term'))[:20]
+        cafes = Cafe.objects.filter(name__contains=request.GET.get('term'), activated=True)[:20]
         for cafe in cafes:
             results.append(cafe.name)
 
@@ -25,12 +28,51 @@ def get_cafes(request):
 def cafes(request):
     if request.GET.get('query'):
         return render(request, 'cafes/_cafes.html',
-                      {'cafes': Cafe.objects.filter(name__contains=request.GET.get('query')),
+                      {'cafes': Cafe.objects.filter(name__contains=request.GET.get('query'), activated=True),
                        'query': request.GET.get('query')})
     else:
-        return render(request, 'cafes/_cafes.html', {'cafes': Cafe.objects.all()})
+        return render(request, 'cafes/_cafes.html', {'cafes': Cafe.objects.filter(activated=True)})
 
 
 def cafe(request, pk):
+    comment_form = CommentForm()
+    current_cafe = Cafe.objects.get(id=pk)
     return render(request, 'cafes/_cafe.html',
-                  {'cafe': Cafe.objects.get(id=pk), 'images': CafeImage.objects.filter(cafe=pk)})
+                  {'cafe': current_cafe, 'images': CafeImage.objects.filter(cafe=pk),
+                   'comment_form': comment_form, 'comments': Comment.objects.filter(cafe=current_cafe)})
+
+
+def comment(request, pk):
+    if request.method == 'POST':
+        form = CommentForm(request.POST)
+        if form.is_valid() and request.user.is_authenticated:
+            comment = form.save(commit=False)
+            comment.cafe = Cafe.objects.get(id=pk)
+            comment.author = User.objects.get(id=request.user.id)
+            comment.save()
+            return redirect('/cafes/' + str(pk))
+
+        else:
+            return redirect('/cafes/' + str(pk))
+
+
+def hide_comment(request, cafe_id, comment_id):
+    if request.user.is_superuser:
+        comment_ = Comment.objects.get(id=comment_id)
+        comment_.show = False
+        comment_.save()
+        comment_.refresh_from_db()
+        return redirect('/cafes/' + str(cafe_id))
+    else:
+        return redirect('/cafes/' + str(cafe_id))
+
+
+def show_comment(request, cafe_id, comment_id):
+    if request.user.is_superuser:
+        comment_ = Comment.objects.get(id=comment_id)
+        comment_.show = True
+        comment_.save()
+        comment_.refresh_from_db()
+        return redirect('/cafes/' + str(cafe_id))
+    else:
+        return redirect('/cafes/' + str(cafe_id))
