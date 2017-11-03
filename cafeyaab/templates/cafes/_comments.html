@@ -1,0 +1,28 @@
+{% for comment in comments %}
+    {% if not user.is_superuser and comment.show or user.is_superuser %}
+        <div style="float: left;width: 450px;background: #f7f7f7;padding: 20px;margin-bottom: 20px;display: block; clear: both;"
+             class="comment">
+            {% if user.is_superuser %}
+                {% if comment.show %}
+                    <span onclick="window.location = '{{ cafe.id }}/comments/{{ comment.id }}/change_visibility'"
+                          class="glyphicon glyphicon-remove pull-right"></span>
+                {% else %}
+                    <span onclick="window.location = '{{ cafe.id }}/comments/{{ comment.id }}/change_visibility'"
+                          class="glyphicon glyphicon-plus pull-right"></span>
+                {% endif %}
+            {% endif %}
+            <span><a href="/profiles/{{ comment.author }}">{{ comment.author }}</a>:</span>
+            <p>{{ comment.text }}</p>
+        </div>
+    {% endif %}
+{% endfor %}
+{% if user.is_authenticated %}
+    <form action="{{ cafe.id }}/comment" method="post" style="clear: both;">
+        <div class="form-group">
+            {% csrf_token %}
+            <textarea style="width: 450px;margin-bottom: 20px;" class="form-control" rows="10"
+                      name="text"></textarea>
+            <button class="btn btn-success" type="submit">Submit</button>
+        </div>
+    </form>
+{% endif %}

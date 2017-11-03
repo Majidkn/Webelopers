@@ -7,7 +7,7 @@ from django.http import HttpResponse
 from django.http import HttpResponseRedirect
 
 from cafeyaab.models import User as user
-from django.contrib.auth.models import User
+from cafeyaab.models import User
 from django.http import HttpResponse
 from django.shortcuts import get_object_or_404
 
@@ -62,10 +62,10 @@ def comment(request, pk):
             return redirect('/cafes/' + str(pk))
 
 
-def hide_comment(request, cafe_id, comment_id):
+def change_comment_visibility(request, cafe_id, comment_id):
     if request.user.is_superuser:
         comment_ = Comment.objects.get(id=comment_id)
-        comment_.show = False
+        comment_.show = not comment_.show
         comment_.save()
         comment_.refresh_from_db()
         return redirect('/cafes/' + str(cafe_id))
@@ -73,28 +73,17 @@ def hide_comment(request, cafe_id, comment_id):
         return redirect('/cafes/' + str(cafe_id))
 
 
-def show_comment(request, cafe_id, comment_id):
-    if request.user.is_superuser:
-        comment_ = Comment.objects.get(id=comment_id)
-        comment_.show = True
-        comment_.save()
-        comment_.refresh_from_db()
-        return redirect('/cafes/' + str(cafe_id))
-    else:
-        return redirect('/cafes/' + str(cafe_id))
-
-def favit(request, cafeid):
-    print("Entered")
-    user = request.user
-    if user.fav_list.filter(id=cafeid).exists():
-        user.fav_list.remove(get_object_or_404(Cafe, pk=cafeid))
-        mycafe = Cafe.objects.get(pk=cafeid)
-        mycafe.popularity -= 1
-        mycafe.save()
+def favourite(request, cafe_id):
+    current_user = request.user
+    if current_user.fav_list.filter(id=cafe_id).exists():
+        current_user.fav_list.remove(get_object_or_404(Cafe, pk=cafe_id))
+        cafe_to_change = Cafe.objects.get(pk=cafe_id)
+        cafe_to_change.popularity -= 1
+        cafe_to_change.save()
 
     else:
-        user.fav_list.add(get_object_or_404(Cafe, pk=cafeid))
-        mycafe = Cafe.objects.get(pk=cafeid)
-        mycafe.popularity += 1
-        mycafe.save()
+        current_user.fav_list.add(get_object_or_404(Cafe, pk=cafe_id))
+        cafe_to_change = Cafe.objects.get(pk=cafe_id)
+        cafe_to_change.popularity += 1
+        cafe_to_change.save()
     return HttpResponseRedirect(request.META.get('HTTP_REFERER'))

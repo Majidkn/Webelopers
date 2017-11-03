@@ -9,11 +9,8 @@ from django.contrib.auth import authenticate, login
 from cafe.models import Cafe
 from .models import User
 
-
-
 from cafeyaab.forms import EditForm
 from .forms import SignUpForm
-
 
 def BaseView(request):
     return render(request, 'cafeyaab/__base.html')
@@ -47,11 +44,10 @@ def account_activation_sent(request):
 
 
 def delete_image(request, userId):
-    user = User.objects.get(id = userId)
+    user = User.objects.get(id=userId)
     user.profile_pic = 'pic_folder/__none/no-img.png'
     user.save()
     return redirect('profile')
-
 
 
 def profiles(request, pk):
@@ -63,7 +59,7 @@ def profiles(request, pk):
 
 
 def profile(request):
-    if request.user:
+    if request.user.is_authenticated:
         user = User.objects.get(id=request.user.id)
         cafes = Cafe.objects.filter(creator=user)
         print cafes
@@ -75,30 +71,30 @@ def profile(request):
         return redirect('login')
 
 
-def editprofile(request):
-    if request.method == 'POST':
-        form = EditForm(data=request.POST, files=request.FILES, instance=request.user)
-        if form.is_valid():
-            user = form.save(commit=False)
-            print(user.profile_pic.url)
-            user.save()
-            return redirect('profile')
+def edit_profile(request):
+    if request.user.is_authenticated:
+        if request.method == 'POST':
+            form = EditForm(data=request.POST, files=request.FILES, instance=request.user)
+            if form.is_valid():
+                user = form.save(commit=False)
+                user.save()
+                return redirect('profile')
+        else:
+            form = EditForm(instance=request.user)
+            return render(request, 'cafeyaab/edit_profile.html', {'form': form, 'userId': request.user.id})
     else:
-
-        form = EditForm(instance=request.user)
-
-    return render(request, 'cafeyaab/editprofile.html', {'form': form, 'userId':request.user.id})
+        return redirect('login')
 
 
 def add_cafe(request):
     if request.method == 'POST':
-        tmpCafe = request.POST
+        tmp_cafe = request.POST
         new_cafe = Cafe()
-        new_cafe.name = tmpCafe['name']
-        new_cafe.description = tmpCafe['description']
-        new_cafe.main_image_url = tmpCafe['main_image_url']
-        new_cafe.latitude = tmpCafe['latitude']
-        new_cafe.longitude = tmpCafe['longitude']
+        new_cafe.name = tmp_cafe['name']
+        new_cafe.description = tmp_cafe['description']
+        new_cafe.main_image_url = tmp_cafe['main_image_url']
+        new_cafe.latitude = tmp_cafe['latitude']
+        new_cafe.longitude = tmp_cafe['longitude']
         new_cafe.creator = User.objects.get(id=request.user.id)
         new_cafe.save()
         return redirect('/profile')

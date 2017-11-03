@@ -15,16 +15,7 @@
                     <img class="cafe-main-image" src="{{ cafe.main_image_url }}" alt="">
                     <div class="cafe-info">
                         <span><a href="cafes/{{ cafe.id }}">{{ cafe.name }}</a></span>
-                        <div class="popularity">
-                            {% if cafe in user.fav_list.all %}
-                                <i onclick="window.location = 'cafes/{{ cafe.id }}/favit'" class="fa fa-lg fa-heart"
-                                   aria-hidden="true" style="color:red"></i>
-                            {% else %}
-                                <i onclick="window.location = 'cafes/{{ cafe.id }}/favit'" class="fa fa-lg fa-heart"
-                                   aria-hidden="true" style="color:#ccc"></i>
-                            {% endif %}
-                            <span>{{ cafe.popularity }}</span>
-                        </div>
+                        {% include 'cafes/_favourite.html' %}
                         <br>
                         <span style="position: relative; top: 20px;">{{ cafe.description }}</span>
                     </div>
