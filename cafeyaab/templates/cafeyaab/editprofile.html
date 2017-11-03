@@ -20,7 +20,8 @@
                 {% endfor %}
                 <button class="btn btn-success" type="submit">Edit Profile</button>
                 {% if user.profile_pic != "pic_folder/__none/no-img.png" %}
-                    <span class="btn btn-danger" onclick="window.location = '/profile/{{ userId }}/delete_image'">Delete Profile Picture</span>{% endif %}
+                    <span class="btn btn-danger" onclick="window.location = '/profile/{{ userId }}/delete_image'">Delete Profile Picture</span>
+                {% endif %}
             </div>
         </form>
     </div>

@@ -8,27 +8,56 @@
     <p style="text-align: center"> Your Name: {{ user.first_name }}</p>
     <p style="text-align: center"> Your Email: {{ user.email }}</p>
     <h3 style="text-align: center">Favorite List</h3>
-    <ul style="text-align: center;padding:0px">
-        {% for cafe in user.fav_list.all %}
-            <li>{{ cafe }}</li>
-        {% endfor %}
-    </ul>
-    <p style="text-align: center">My Cafes : </p><br>
     <div style="margin: 0 auto;display: block;width: 50%">
-        <div class="col-sm-6">
-
-            {% for cafe in cafes %}
-                {% if cafe.name %}
-                    <div class="cafe">
-                        <img class="cafe-main-image" src="{{ cafe.main_image_url }}" alt="">
-                        <div class="cafe-info">
-                        <span><a href="cafes/{{ cafe.id }}">{{ cafe.name }}{% if not cafe.activated %} (Not
-                            Activated){% endif %}</a></span><br>
-                            <span style="position: relative; top: 20px;">{{ cafe.description }}</span>
+        {% for cafe in user.fav_list.all %}
+            {% if cafe.name %}
+                <div class="cafe">
+                    <img class="cafe-main-image" src="{{ cafe.main_image_url }}" alt="">
+                    <div class="cafe-info">
+                        <span><a href="cafes/{{ cafe.id }}">{{ cafe.name }}</a></span>
+                        <div class="popularity">
+                            {% if cafe in user.fav_list.all %}
+                                <i onclick="window.location = 'cafes/{{ cafe.id }}/favit'" class="fa fa-lg fa-heart"
+                                   aria-hidden="true" style="color:red"></i>
+                            {% else %}
+                                <i onclick="window.location = 'cafes/{{ cafe.id }}/favit'" class="fa fa-lg fa-heart"
+                                   aria-hidden="true" style="color:#ccc"></i>
+                            {% endif %}
+                            <span>{{ cafe.popularity }}</span>
                         </div>
+                        <br>
+                        <span style="position: relative; top: 20px;">{{ cafe.description }}</span>
                     </div>
-                {% endif %}
-            {% endfor %}
-        </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+    <h3 style="text-align: center">My Cafes</h3>
+    <div style="margin: 0 auto;display: block;width: 50%">
+        {% for cafe in cafes %}
+            {% if cafe.name %}
+                <div class="cafe">
+                    <img class="cafe-main-image" src="{{ cafe.main_image_url }}" alt="">
+                    <div class="cafe-info">
+                        <span><a href="cafes/{{ cafe.id }}">{{ cafe.name }}{% if not cafe.activated %} (Not
+                            Activated){% endif %}</a></span>
+                        {% if not cafe.activated %}
+                            <div class="popularity">
+                                {% if cafe in user.fav_list.all %}
+                                    <i onclick="window.location = 'cafes/{{ cafe.id }}/favit'" class="fa fa-lg fa-heart"
+                                       aria-hidden="true" style="color:red"></i>
+                                {% else %}
+                                    <i onclick="window.location = 'cafes/{{ cafe.id }}/favit'" class="fa fa-lg fa-heart"
+                                       aria-hidden="true" style="color:#ccc"></i>
+                                {% endif %}
+                                <span>{{ cafe.popularity }}</span>
+                            </div>
+                        {% endif %}
+                        <br>
+                        <span style="position: relative; top: 20px;">{{ cafe.description }}</span>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
     </div>
 {% endblock %}
