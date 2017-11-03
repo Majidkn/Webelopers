@@ -48,6 +48,10 @@ ul li {
     list-style: none;
 }
 
+input[name="profile_pic"] {
+    padding: 0;
+}
+
 .cafe-list {
 
 }
