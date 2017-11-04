@@ -1,6 +1,6 @@
 {% for comment in comments %}
     {% if not user.is_superuser and comment.show or user.is_superuser %}
-        <img class="author_picture" src="{{ comment.author.profile_pic }}" alt="">
+        <img class="author_picture" src="{{ comment.author.profile_pic.url }}" alt="">
         <div class="comments col-sm-12" style="width: calc(100% - 90px)">
             <div class="comment" style="float: left;width: 450px;background: #f7f7f7;padding: 20px;margin-bottom: 20px;display: block;">
                 {% if user.is_superuser %}
