@@ -1,10 +1,10 @@
 <div class="popularity">
     {% if cafe in user.fav_list.all %}
-        <i {% if user.is_authenticated %} onclick="window.location = '{{ cafe.id }}/favourite'" {% endif %}
+        <i {% if user.is_authenticated %} onclick="window.location = '/cafes/{{ cafe.id }}/favourite'" {% endif %}
                                           class="fa fa-lg fa-heart"
                                           aria-hidden="true" style="color:red"></i>
     {% else %}
-        <i {% if user.is_authenticated %} onclick="window.location = '{{ cafe.id }}/favourite'" {% endif %}
+        <i {% if user.is_authenticated %} onclick="window.location = '/cafes/{{ cafe.id }}/favourite'" {% endif %}
                                           class="fa fa-lg fa-heart"
                                           aria-hidden="true" style="color:#ccc"></i>
     {% endif %}
