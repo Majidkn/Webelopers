@@ -8,9 +8,9 @@ from django.core.urlresolvers import reverse
 from django.contrib.auth import authenticate, login
 from cafe.models import Cafe
 from .models import User
-
 from cafeyaab.forms import EditForm
 from .forms import SignUpForm
+from django.http import JsonResponse
 
 def BaseView(request):
     return render(request, 'cafeyaab/__base.html')
@@ -101,3 +101,11 @@ def add_cafe(request):
 
     else:
         return render(request, 'cafes/_add_cafe.html')
+
+
+def validate_username(request):
+    username = request.GET.get('username', None)
+    data = {
+        'is_taken': User.objects.filter(username__iexact=username).exists()
+    }
+    return JsonResponse(data)

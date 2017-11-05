@@ -49,5 +49,27 @@
         });
         $("#id_captcha_1").css("display", "inline-block")
         $("img.captcha").css("margin-right", "20px").css("display", "inline-block")
+
+        $("#id_username").change(function () {
+            var username = $(this).val();
+
+             $.ajax({
+                url: '/ajax/validate_username/',
+                data: {
+                  'username': username
+                },
+                dataType: 'json',
+                success: function (data) {
+                  if (data.is_taken) {
+                    $("#id_username").css("border", "1px solid red");
+                  }
+                  else {
+                      $("#id_username").css("border", "1px solid #66afe9");
+                  }
+                }
+              });
+
+        });
+
     </script>
 {% endblock %}
