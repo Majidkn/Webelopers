@@ -11,4 +11,5 @@ urlpatterns = [
     url(r'^profiles/(?P<pk>[\w-]+)', views.profiles, name='profiles'),
     url(r'^signup', views.signup, name='signup'),
     url(r'^account_activation_sent$', views.account_activation_sent, name='account_activation_sent'),
+    url(r'^ajax/validate_username/$', views.validate_username, name='validate_username'),
 ]
