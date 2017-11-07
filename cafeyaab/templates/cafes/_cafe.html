@@ -20,7 +20,7 @@
             <div id="comments" class="tab-pane fade in active" style="padding: 20px;">
                 {% include 'cafes/_comments.html' %}
             </div>
-            <div id="mapp" class="tab-pane fade in active" style="height: calc(44vh + 5px); width: 80%; display: none;">
+            <div id="mapp" class="tab-pane fade" style="height: calc(44vh + 5px); width: 80%;">
             </div>
         </div>
     </div>
@@ -28,8 +28,9 @@
 
 {% block javascript %}
         <script type="text/javascript">
+            var map;
             initMap = function () {
-                var map = new google.maps.Map(document.getElementById('mapp'), {
+                map = new google.maps.Map(document.getElementById('mapp'), {
                     zoom: 10,
                     center: new google.maps.LatLng({{cafe.latitude}}, {{cafe.longitude}}),
                     mapTypeControl: false,
@@ -334,11 +335,11 @@
                         icon: '/static/marker.png'
                     });
             }
-
-        $("ul.nav li a").click(function () {
-            $("#mapp").css("display", "block");
-        })
-
+            $('a[href="#mapp"]').on('shown.bs.tab', function(e) {
+                var newmapcenter = map.getCenter();
+                google.maps.event.trigger(map, 'resize');
+                map.setCenter(newmapcenter);
+            });
         </script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTpdUDVpmjWPDZZY_JLAE53ITYdZUSdL0&callback=initMap"
                 type="text/javascript"></script>
