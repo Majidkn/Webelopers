@@ -2,6 +2,8 @@
 from __future__ import unicode_literals
 
 import user
+
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.http import HttpResponse
 from django.http import HttpResponseRedirect
@@ -71,7 +73,6 @@ def change_comment_visibility(request, cafe_id, comment_id):
         return redirect('/cafes/' + str(cafe_id))
     else:
         return redirect('/cafes/' + str(cafe_id))
-
 
 def favourite(request, cafe_id):
     current_user = request.user

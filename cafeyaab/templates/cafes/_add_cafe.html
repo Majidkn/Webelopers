@@ -28,8 +28,15 @@
 
     </div>
     <script type="text/javascript">
+        gotData = false;
+        $(document).on('marker-dropped', (data) => {
+            if (!gotData) {
+                $('input[name="latitude"]').val(data.lat);
+                $('input[name="longitude"]').val(data.lng);
+                gotData = true;
+            }
+        });
         $(document).on('position-changed', (data) => {
-            console.log(data);
             $('input[name="latitude"]').val(data.lat);
             $('input[name="longitude"]').val(data.lng);
         });
@@ -343,7 +350,7 @@
                 map.setZoom(15);
             }
 
-            var markers = [];
+            var markers = [], marker;
             google.maps.event.addListener(map, 'click', function (event) {
                 if (!markers.length) {
                     marker = new google.maps.Marker({
@@ -353,22 +360,28 @@
                         icon: "/static/marker.png"
                     });
                     markers.push(marker);
+                    map.panTo(marker.getPosition());
                     let latLng = event.latLng;
+                    $(document).trigger({
+                        type: "marker-dropped",
+                        lat: latLng.lat(),
+                        lng: latLng.lng()
+                    });
+                } else {
+                    google.maps.event.clearListeners(map, 'click');
+                }
+                google.maps.event.addListener(map, 'center_changed', function (event) {
+                    marker.setPosition(map.getCenter());
+                    let latLng = map.getCenter();
                     $(document).trigger({
                         type: "position-changed",
                         lat: latLng.lat(),
                         lng: latLng.lng()
                     });
-                    google.maps.event.addListener(map, 'mouseup', function (event) {
-                        let latLng = event.latLng;
-                        $(document).trigger({
-                            type: "position-changed",
-                            lat: latLng.lat(),
-                            lng: latLng.lng()
-                        });
-                    });
+                });
+            });
 
-                }
+            google.maps.event.addListener(map, 'mouseup', function (event) {
 
             });
 
