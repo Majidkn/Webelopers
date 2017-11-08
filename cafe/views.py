@@ -39,7 +39,8 @@ def cafes(request):
                       {'cafes': Cafe.objects.filter(name__contains=request.GET.get('query'), activated=True),
                        'query': request.GET.get('query')})
     else:
-        return render(request, 'cafes/_cafes.html', {'cafes': Cafe.objects.filter(activated=True)})
+        return render(request, 'cafes/_cafes.html', {'cafes': Cafe.objects.filter(activated=True)
+                      .order_by('-popularity')})
 
 
 def cafe(request, pk):
